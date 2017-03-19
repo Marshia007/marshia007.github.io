@@ -1,0 +1,34 @@
+.jumbotron {
+      margin-bottom: 0;
+    }
+
+.row{
+
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+img{
+
+	width: 50%;
+	height: 50%;
+	margin-left: 60px;
+	margin-top: 20px;
+}
+
+footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+}
+
+.ng-invalid .ng-dirty{
+	border-color: #FA787E;
+}
+
+.ng-valid .ng-dirty{
+	border-color: #78FA89;
+}
+
+.ng-pristine .ng-invalid{
+	border-color: #54AAC7;
+}

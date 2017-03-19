@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <script src="css/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="products.js"></script>
+  </head>
+
+  <body ng-controller="StoreController as store" class="container-fluid">
+
+    <!--  Store Header  -->
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1> Gems Store</h1>      
+        <p>Online Purchase</p>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">GemStore</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Deal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--  Products Container  -->
+    <div class="container" >  
+
+      <div class="row">
+
+        <div class="col-sm-4" ng-repeat="product in store.products">
+          <div class="panel panel-primary"  >
+            <div class="panel-heading"> {{product.name}}</div>
+
+            <div class="panel-body">
+            <product-gallery ></product-gallery> <br> 
+            <b> {{product.price | currency}} <button class="btn btn-primary" ng-show="product.canPurchase">Add to Cart</button>  </b> <br> <br>
+            <product-tabs></product-tabs>
+            </div>
+
+            <div class="panel-footer"></div>
+          </div>
+        </div>
+
+      </div> <!--row-->
+
+      
+
+    </div><br>
+
+    <footer class="container-fluid text-center">
+      <p>Online Store Copyright</p>  
+      
+    </footer>
+
+  </body>
+</html>
